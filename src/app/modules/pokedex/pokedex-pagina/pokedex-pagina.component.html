@@ -1,0 +1,16 @@
+<div class="pokedex">
+    <h1>App de Pokedex</h1>
+    <hr>
+    <input type="text" [(ngModel)]="src" placeholder="Buscar pokemon">
+    <button (click)="search()">Buscar Pokemon</button><br> <!-- Al hacer click llamamos la funcion search dentro del componente -->
+    <div *ngIf="existenDatos" class="info_pokemon">
+        <img src="{{ urlImage }}" alt="imagen_pokemon"><br>
+        <p>Nombre: {{ name }}</p>
+        <p>ID: {{ id }}</p>
+        <p>Tamaño: {{ weight }}cm</p>
+        <p>Peso: {{ height }}kg</p>
+
+    </div>
+    
+
+</div>
