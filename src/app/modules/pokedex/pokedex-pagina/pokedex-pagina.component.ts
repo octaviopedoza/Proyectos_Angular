@@ -1,6 +1,9 @@
 import { PokedexService } from './../services/pokedex.service';
 import { Component, OnInit } from '@angular/core';
 
+
+
+
 @Component({
   selector: 'app-pokedex-pagina',
   templateUrl: './pokedex-pagina.component.html',
@@ -14,6 +17,8 @@ export class PokedexPaginaComponent implements OnInit{
   id?:number;
   weight?:number;
   height?:number;
+
+  value = 'Limpiar';
 
   constructor(private pokedexService:PokedexService) {}
 

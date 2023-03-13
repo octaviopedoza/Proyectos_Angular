@@ -1,16 +1,30 @@
 <div class="pokedex">
-    <h1>App de Pokedex</h1>
-    <hr>
-    <input type="text" [(ngModel)]="src" placeholder="Buscar pokemon">
-    <button (click)="search()">Buscar Pokemon</button><br> <!-- Al hacer click llamamos la funcion search dentro del componente -->
-    <div *ngIf="existenDatos" class="info_pokemon">
-        <img src="{{ urlImage }}" alt="imagen_pokemon"><br>
-        <p>Nombre: {{ name }}</p>
-        <p>ID: {{ id }}</p>
-        <p>Tamaño: {{ weight }}cm</p>
-        <p>Peso: {{ height }}kg</p>
-
+    <mat-card>
+        <mat-card-header>
+            <h1>Pokedex</h1>
+        </mat-card-header>
+        <mat-form-field class="input_pokemon">
+            <input matInput type="text" [(ngModel)]="src" placeholder="Buscar pokemon">
+        </mat-form-field>
+        <mat-card-actions>
+            <button mat-raised-button (click)="search()">Buscar Pokemon</button>
+        </mat-card-actions>   
+    </mat-card>
+    <div *ngIf="existenDatos">
+    <ng-template #ifBlock></ng-template>
+    <mat-card class="datos_tarjeta">
+        <mat-card-header>    
+            <mat-card-title>
+                <img mat-card-image src="{{ urlImage }}" alt="imagen_pokemon">
+            </mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <p>Nombre: {{ name }}</p>
+            <p>ID: {{ id }}</p>
+            <p>Tamaño: {{ weight }}cm</p>
+            <p>Peso: {{ height }}kg</p>
+        </mat-card-content>
+    </mat-card>
     </div>
     
-
 </div>

@@ -1,9 +1,15 @@
-.pokedex{
-    width: 100%;
-    display: grid;
-    place-content: center;
+.datos_tarjeta{
+    max-width: 200px;
+    border: 1px solid gray;
+    border-radius: 10px;
 }
 
-.info_pokemon{
-    align-content: center;
+.input_pokemon{
+    min-width: 150px;
+    max-width: 200px;
+    width: 100%;
+}
+
+.pokedex{
+    margin: 50px;
 }
