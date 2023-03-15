@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ClimaPageComponent } from './clima-page/clima-page.component';
-
+import { MatCardModule } from '@angular/material/card';
 
 
 @NgModule({
@@ -9,7 +9,8 @@ import { ClimaPageComponent } from './clima-page/clima-page.component';
     ClimaPageComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    MatCardModule,
   ]
 })
 export class ClimaModule { }

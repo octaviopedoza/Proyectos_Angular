@@ -1,1 +1,25 @@
-<p>clima-page works!</p>
+<div class="clima_page">
+
+    <div class="row" *ngIf="cargando">
+        <div>
+            <h1>Cargando espere un momento...</h1>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Loading_icon.gif" alt="cargando">
+        </div>
+    </div>
+
+    <div *ngIf="!cargando">
+        <mat-card>
+            <mat-card-header>
+                <mat-card-title>Estado: {{ state }} </mat-card-title>
+                <mat-card-subtitle>Ciudad: {{ city }}</mat-card-subtitle>
+                <mat-card-subtitle>fecha: {{ dia }} - {{ mes }} - {{ anio }}</mat-card-subtitle>
+            </mat-card-header>
+            <mat-card-content>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam venenatis placerat neque a sollicitudin. Sed auctor tincidunt libero, ut feugiat arcu lacinia eget. 
+                Aliquam suscipit eros non feugiat pharetra. Etiam a maximus nibh, sed dapibus est. Phasellus nisi justo,
+                euismod eget orci a, auctor eleifend metus. Donec vitae eros ac metus pellentesque aliquet a et justo. Morbi mauris nibh, mattis at efficitur ut, pellentesque in lacus.
+            </mat-card-content>
+        </mat-card>
+    </div>
+
+</div>
